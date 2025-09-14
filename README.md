@@ -8,50 +8,50 @@
 Entidad fundamental del sistema que representa a todas las personas registradas, tiene un identificador unico natural y existe independiente de otras entidades
 
 **Atributos** : 
-    - RUN (primary key), nombres, apellidos, telefono, correo electronico, direccion
+- RUN (primary key), nombres, apellidos, telefono, correo electronico, direccion
 
 **1.2 Institucion provisional de salud**
 Representa las instituciones previsionales de salud ISAPRES y FONASA.
 Tiene identificador único
 
 **Atributos** : 
-    - Codigo ministerial (primary key), nombre, rut, enlace
+- Codigo ministerial (primary key), nombre, rut, enlace
 
 **1.3 Maestro Farmacia**
 Catalogo de productos farmaceuticos con identificador unico, existe independiente al sistema interno
 
 **Atributos** : 
-    - codigo generico (primary key), nombre_producto_generico, descripcion_producto_generico, tipo_producto, codigo_onu, clasificacion_onu, clasificacion_interna, estado_codigo_generico, canasta_esencial, precio
+- codigo generico (primary key), nombre_producto_generico, descripcion_producto_generico, tipo_producto, codigo_onu, clasificacion_onu, clasificacion_interna, estado_codigo_generico, canasta_esencial, precio
 
 **1.4 Arancel Fonasa**
 Lista oficial de prestaciones médicas de FONASA con identificadores unicos. Es independiente al centro médico
 
 **Atributos** : 
-    - codigo (primary key), codigo_adicional (primary key), consultas_atencion_medica, valor_fonasa, grupo, tipo
+ - codigo (primary key), codigo_adicional (primary key), consultas_atencion_medica, valor_fonasa, grupo, tipo
 
 **1.5 Arancel DCColita de Rana**
 Arancel interno del centro médico con código propios únicos. Existe independientemente aunque se base en Fonasa
 
 **Atributos** : 
-    - codigo interno (primary key), codigo_fonasa, consultas_atencion_medica, valor
+- codigo interno (primary key), codigo_fonasa, consultas_atencion_medica, valor
 
 **1.6 consulta médica**
 Representa las consultas medicas realizadas. Tiene identificador surrogate unico y existe como evento médico independiente
 
 **Atributos** : 
-    - id_consulta(surrogate key), fecha, diagnostico
+- id_consulta(surrogate key), fecha, diagnostico
 
 **1.7 Receta**
 Documento medico con identificador surrogate unico. Aunque se origina es consuultas, tiene existencia propia como un documento legal
 
 **Atributos** :
-    - id_receta (surrogate_key), fecha
+- id_receta (surrogate_key), fecha
 
 **1.8 Orden**
 Docuemtno médico para solicitud de examenes/procedimientos. Tiene identificador surrogate unico y existencia independiente como documento 
 
 **Atributos** : 
-    - id_orden (surrogate_key), fecha
+- id_orden (surrogate_key), fecha
 
 
 ## 2. Entidades débiles
